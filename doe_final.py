@@ -35,8 +35,6 @@ parser.add_argument('--layers', default=40, type=int, help='total number of laye
 parser.add_argument('--widen-factor', default=2, type=int, help='widen factor')
 parser.add_argument('--droprate', default=0.3, type=float, help='dropout probability')
 # Checkpoints
-parser.add_argument('--save', '-s', type=str, default='./snapshots/', help='Folder to save checkpoints.')
-parser.add_argument('--load', '-l', type=str, default='./snapshots/pretrained', help='Checkpoint path to resume / test.')
 parser.add_argument('--test', '-t', action='store_true', help='Test only flag.')
 # Acceleration
 parser.add_argument('--ngpu', type=int, default=1, help='0 = CPU.')
