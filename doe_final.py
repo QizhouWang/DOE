@@ -85,8 +85,7 @@ calib_indicator = ''
 if args.calibration:
     train_data_in, val_data = validation_split(train_data_in, val_share=0.1)
     calib_indicator = '_calib'
-ood_data = dset.ImageFolder(root="../../data/tiny-imagenet-200/train/", transform=trn.Compose([trn.Resize(32), trn.RandomCrop(32, padding=4), trn.RandomHorizontalFlip(), trn.ToTensor(), trn.Normalize(mean, std)]))
-# ood_data = TinyImages(transform=trn.Compose([trn.ToTensor(), trn.ToPILImage(), trn.RandomCrop(32, padding=4), trn.RandomHorizontalFlip(), trn.ToTensor(), trn.Normalize(mean, std)]), exclude_cifar = True)
+ood_data = dset.ImageFolder(root="../data/tiny-imagenet-200/train/", transform=trn.Compose([trn.Resize(32), trn.RandomCrop(32, padding=4), trn.RandomHorizontalFlip(), trn.ToTensor(), trn.Normalize(mean, std)]))
 
 train_loader_in = torch.utils.data.DataLoader(train_data_in, batch_size=args.batch_size, shuffle=True, num_workers=args.prefetch, pin_memory=False)
 train_loader_out = torch.utils.data.DataLoader(ood_data, batch_size=args.oe_batch_size, shuffle=True, num_workers=args.prefetch, pin_memory=True)
@@ -234,9 +233,9 @@ print('Beginning Training\n')
 net = WideResNet(args.layers, num_classes, args.widen_factor, dropRate=args.droprate).cuda()
 # Restore model
 if args.dataset == 'cifar10':
-    model_path = './pretrained/cifar10_wrn_pretrained_epoch_99.pt'
+    model_path = './ckpt/cifar10_wrn_pretrained_epoch_99.pt'
 else:
-    model_path = './pretrained/cifar100_wrn_pretrained_epoch_99.pt'
+    model_path = './ckpt/cifar100_wrn_pretrained_epoch_99.pt'
 net.load_state_dict(torch.load(model_path))
 optimizer = torch.optim.SGD(net.parameters(), args.learning_rate, momentum=args.momentum, weight_decay=args.decay, nesterov=True)
 def cosine_annealing(step, total_steps, lr_max, lr_min):
