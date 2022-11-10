@@ -1,10 +1,12 @@
 # Out-of-distribution Detection with Implicit Outlier Transformation
 
-**Keywords**: Out-of-distribution Detection, Reliable Machine Learning
+
 
 **[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)**
 
 ICLR 2023 (under review)
+
+**Keywords**: Out-of-distribution Detection, Reliable Machine Learning
 
 ```
 @inproceedings{
