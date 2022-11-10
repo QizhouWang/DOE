@@ -75,11 +75,11 @@ After the preparation work, the whole project should have the following structur
 │   └── cifar100_wrn_pretrained_epoch_99.pt
 ├── models                          # models
 │   └── wrn.py
-├── utils                          # utils
+├── utils                           # utils
 │   ├── display_results.py                        
 │   ├── utils_awp.py
 │   └── validation_dataset.py
-└── doe_final.py                        # training code
+└── doe_final.py                    # training code
 ```
 
 
@@ -96,7 +96,7 @@ python doe_final.py cifar10
 
 - CIFAR-100
 ```train cifar100
-python doe_final.py cifar10 0
+python doe_final.py cifar100
 ```
 
 ## Results
