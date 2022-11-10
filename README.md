@@ -2,7 +2,7 @@
 
 
 
-**[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)**
+**[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)** 
 
 ICLR 2023 (under review)
 
@@ -33,8 +33,79 @@ note={under review}
 
 ### Pretrained Models and Datasets
 
+Pretrained models are provided in folder
 
+```
+./ckpt/
+```
+
+Please download the datasets in folder
+
+```
+../data/
+```
+
+Surrogate OOD Dataset
 
 - [tiny-ImageNet-200](https://github.com/chihhuiho/CLAE/blob/main/datasets/download_tinyImagenet.sh)
 
-- []
+
+Test OOD Datasets 
+
+- [Textures](https://www.robots.ox.ac.uk/~vgg/data/dtd/)
+
+- [Places365](http://places2.csail.mit.edu/download.html)
+
+- [LSUN-C](https://www.dropbox.com/s/fhtsw1m3qxlwj6h/LSUN.tar.gz)
+ 
+- [LSUN-R](https://www.dropbox.com/s/moqh2wh8696c3yl/LSUN_resize.tar.gz)
+
+- [iSUN](https://www.dropbox.com/s/ssz7qxfqae0cca5/iSUN.tar.gz)
+
+
+### File Structure
+
+After the preparation work, the whole project should have the following structure:
+
+```
+./DOE
+├── README.md
+├── ckpt                            # datasets
+│   ├── cifar10_wrn_pretrained_epoch_99.pt 
+│   └── cifar100_wrn_pretrained_epoch_99.pt
+├── models                          # models
+│   └── wrn.py
+├── utils                          # utils
+│   ├── display_results.py                        
+│   ├── utils_awp.py
+│   └── validation_dataset.py
+└── doe_final.py                        # training code
+```
+
+
+
+## Training
+
+To train the DOE model on CIFAR benckmarks, simply run:
+
+- CIFAR-10
+```train cifar10
+python doe_final.py cifar10 
+```
+
+
+- CIFAR-100
+```train cifar100
+python doe_final.py cifar10 0
+```
+
+## Results
+
+The key results on CIFAR benchmarks are listed in the following table. 
+
+|     | CIFAR-10 | CIFAR-10 | CIFAR-100 | CIFAR-100 |
+|:---:|:--------:|:--------:|:---------:|:---------:|
+|     |   FPR95  |   AUROC  |   FPR95   |   AUROC   |
+| MSP |   53.77  |   88.40  |   76.73   |   76.24   |
+|  OE |   12.41  |   97.85  |   45.68   |   87.61   |
+| DOE |   5.15   |   98.78  |   25.38   |   93.97   |
