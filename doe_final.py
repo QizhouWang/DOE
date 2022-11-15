@@ -167,7 +167,9 @@ def train(epoch, diff):
             proxy_optim.zero_grad()
             reg_sur.backward()
             # l_sur.backward()
-            torch.nn.utils.clip_grad_norm_(proxy.parameters(), 1)
+            # torch.nn.utils.
+            
+            (proxy.parameters(), 1)
             proxy_optim.step()
             if epoch == args.warmup and batch_idx == 0:
                 diff = awp.diff_in_weights(net, proxy)
@@ -193,7 +195,7 @@ def train(epoch, diff):
             
         optimizer.zero_grad()
         loss.backward()
-        torch.nn.utils.clip_grad_norm_(net.parameters(), 1) 
+        # torch.nn.utils.clip_grad_norm_(net.parameters(), 1) 
         optimizer.step()
 
         if epoch >= args.warmup:
@@ -203,7 +205,7 @@ def train(epoch, diff):
             l_ce = F.cross_entropy(x[:len(in_set[0])], target)
             loss = l_ce # + l_kl
             loss.backward()
-            torch.nn.utils.clip_grad_norm_(net.parameters(), 1)
+            # torch.nn.utils.clip_grad_norm_(net.parameters(), 1)
             optimizer.step()
 
         loss_avg = loss_avg * 0.8 + float(loss) * 0.2
