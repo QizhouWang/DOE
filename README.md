@@ -1,6 +1,6 @@
 # Out-of-distribution Detection with Implicit Outlier Transformation
 
-
+Qizhou Wang, Junjie Ye, Feng Liu, Quanyue Dai, Marcus Kalander, Tongliang Liu, Jianye Hao, and Bo Han. 
 
 **[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)** 
 
@@ -12,7 +12,7 @@ ICLR 2023
 @inproceedings{
 wang2023outofdistribution,
 title={Out-of-distribution Detection with Implicit Outlier Transformation},
-author={Qizhou Wang and Junjie Ye and Feng Liu and Quanyu Dai and Marcus Kalander and Tongliang Liu and Jianye HAO and Bo Han},
+author={Qizhou Wang and Junjie Ye and Feng Liu and Quanyu Dai and Marcus Kalander and Tongliang Liu and Jianye Hao and Bo Han},
 booktitle={International Conference on Learning Representations},
 year={2023},
 url={https://openreview.net/forum?id=hdghx6wbGuD}
