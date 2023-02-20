@@ -1,8 +1,9 @@
 # Out-of-distribution Detection with Implicit Outlier Transformation
 
+**[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)** 
+
 Qizhou Wang, Junjie Ye, Feng Liu, Quanyue Dai, Marcus Kalander, Tongliang Liu, Jianye Hao, and Bo Han. 
 
-**[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)** 
 
 ICLR 2023 
 
