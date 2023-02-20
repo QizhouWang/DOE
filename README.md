@@ -10,13 +10,12 @@ ICLR 2023
 
 ```
 @inproceedings{
-anonymous2023outofdistribution,
+wang2023outofdistribution,
 title={Out-of-distribution Detection with Implicit Outlier Transformation},
-author={Anonymous},
-booktitle={Submitted to The Eleventh International Conference on Learning Representations },
+author={Qizhou Wang and Junjie Ye and Feng Liu and Quanyu Dai and Marcus Kalander and Tongliang Liu and Jianye HAO and Bo Han},
+booktitle={International Conference on Learning Representations},
 year={2023},
-url={https://openreview.net/forum?id=hdghx6wbGuD},
-note={under review}
+url={https://openreview.net/forum?id=hdghx6wbGuD}
 }
 ```
 
