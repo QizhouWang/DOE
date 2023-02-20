@@ -1,11 +1,11 @@
-# Out-of-distribution Detection with Implicit Outlier Transformation
+# Out-of-distribution Detection with Implicit Outlier Transformation (ICLR 2023)
 
 **[Out-of-distribution Detection with Implicit Outlier Transformation](https://openreview.net/forum?id=hdghx6wbGuD)** 
 
 Qizhou Wang, Junjie Ye, Feng Liu, Quanyue Dai, Marcus Kalander, Tongliang Liu, Jianye Hao, and Bo Han. 
 
 
-ICLR 2023 
+
 
 **Keywords**: Out-of-distribution Detection, Reliable Machine Learning
 
