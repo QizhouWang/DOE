@@ -161,7 +161,7 @@ def train(epoch, diff):
             proxy.train()
             scale = torch.Tensor([1]).cuda().requires_grad_()
             x = proxy(data) * scale
-            l_sur = - (x[len(in_set[0]):].mean(1) - torch.logsumexp(x[len(in_set[0]):], dim=1)).mean()
+            l_sur = (x[len(in_set[0]):].mean(1) - torch.logsumexp(x[len(in_set[0]):], dim=1)).mean()
             # l_sur = - (x.log_softmax(1) * (x / 0.1).softmax(1).detach()).sum(-1).mean()
             reg_sur = torch.sum(torch.autograd.grad(l_sur, [scale], create_graph = True)[0] ** 2)
             proxy_optim.zero_grad()
